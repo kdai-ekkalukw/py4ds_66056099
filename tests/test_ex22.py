@@ -12,3 +12,5 @@ def test_rps_check():
     assert rps_check('paper', 'paper') == 'tie'
     assert rps_check('scissors', 'scissors') == 'tie'
     
+
+#%%
