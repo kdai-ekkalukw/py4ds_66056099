@@ -3,7 +3,7 @@ Exercise 14
 """
 
 
-def average(num_list: list) -> float:
+def average(num_list) -> float:
     """
     Calculate the average of a list of numbers.
 
@@ -14,4 +14,7 @@ def average(num_list: list) -> float:
     - float: The average of the numbers in the list.
       If the list is empty, returns 0.
     """
-    pass
+    avg = 0
+    avg = sum(num_list)/len(num_list)
+    float(avg)
+    return avg
