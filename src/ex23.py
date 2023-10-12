@@ -21,9 +21,31 @@ def bottles_of_beer(qty):
     Returns:
         str: The repeated lyrics of bottles of beer on the wall.
     """
-    beer_qty = qty - 1
-    beer = ' bottle of beer.\nTake one down, pass it around,\nNo more bottles of beer on the wall!'
-    return beer
+    #beer_new_qty = qty - 1
+    beer_zero_qty = 'No more'
+    beer_part1 = 'bottles of beer on the wall,\n'
+    beer_part2 = 'bottles of beer.\n'
+    beer_part3 = 'Take one down, pass it around,\n'
+    beer_part4 = 'bottles of beer on the wall'
+    beer_last_nonzero_residual = '.'
+    beer_last_zero_residual = '!'
+
+    beer_new_qty = qty #initial value
+
+    beer_new_qty = beer_new_qty - 1
+    #while beer_new_qty != 0:
+    if beer_new_qty != 0:
+        #beer_new_qty = beer_new_qty - 1
+        out_txt = str(qty) + ' ' + beer_part1 + str(qty) + ' ' + beer_part2 + \
+            beer_part3 + str(beer_new_qty) + ' ' + beer_part4 + beer_last_nonzero_residual
+        #print(out_txt)
+        return out_txt
+    else:
+        out_txt = str(qty) + ' ' + beer_part1 + str(qty) + ' ' + beer_part2 + \
+            beer_part3 + beer_zero_qty + ' ' + beer_part4 + beer_last_zero_residual
+        #print(out_txt)
+        return out_txt
+
 
 
 def loop_bottles_of_bears(bottle):
@@ -33,4 +55,5 @@ def loop_bottles_of_bears(bottle):
 
 
 if __name__ == '__main__':
-    loop_bottles_of_bears(5)
+    #loop_bottles_of_bears(5)
+    bottles_of_beer(1)
