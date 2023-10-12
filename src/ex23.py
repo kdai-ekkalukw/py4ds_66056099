@@ -3,7 +3,7 @@ Exercise 23 : 99 Bottles of Beer on the Wall
 """
 
 
-def bottles_of_beer(param):
+def bottles_of_beer(qty):
     """
     Calculate the number of bottles of beer on the wall.
     And print out like this :
@@ -21,8 +21,9 @@ def bottles_of_beer(param):
     Returns:
         str: The repeated lyrics of bottles of beer on the wall.
     """
-    # TODO : complete this
-    pass
+    beer_qty = qty - 1
+    beer = ' bottle of beer.\nTake one down, pass it around,\nNo more bottles of beer on the wall!'
+    return beer
 
 
 def loop_bottles_of_bears(bottle):

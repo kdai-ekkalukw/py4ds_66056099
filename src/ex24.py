@@ -16,5 +16,5 @@ def get_time_every_15_min():
     Returns:
         str: The generated time string.
     """
-    # TODO : complete this
+
     pass
