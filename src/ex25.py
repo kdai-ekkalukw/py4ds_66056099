@@ -15,7 +15,7 @@ Exercise 25 : Multiplication Table
 """
 
 
-def multiplication_table(param, param1 = 11):
+def multiplication_table(start, end = 11):
     """
     Generates a multiplication table from the given start to the end number.
 
@@ -29,3 +29,22 @@ def multiplication_table(param, param1 = 11):
     print('  | 1  2  3  4  5  6  7  8  9 10')
     print('--+------------------------------')
     # TODO : complete this
+    for i in range(start, end):
+        #print(' ' + str(i) + '|' + ' ')
+        #line_str = ' ' + str(i) + '|' + ' '
+        if i < 10:
+            line_str = ' ' + str(i) + '|' + ' '
+        else:
+            line_str = str(i) + '|' + ' '
+        for j in range(start, end):
+            #print(j * i, ' ')
+            prod = j * i
+            if (prod < 10):
+                prod_str = ' ' + str(prod)
+            elif prod >= 100:
+                prod_str = str(prod)
+            else:
+                prod_str = str(prod)
+            line_str = line_str + prod_str + ' '
+        #print('\n')
+        print(line_str)
